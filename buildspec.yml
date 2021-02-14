@@ -7,5 +7,5 @@ phases:
       - echo Build started on `date`
 
 artifacts:
-  fils:
+  files:
     - '**/*'
