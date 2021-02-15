@@ -11,6 +11,7 @@ phases:
     commands:
       - echo install numpy 
       - pip install numpy
+      - pip install scipy
   build:
     commands:
       - echo Entered the build phase...
