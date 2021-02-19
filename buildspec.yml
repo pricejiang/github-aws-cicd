@@ -12,6 +12,16 @@ phases:
       - echo pre_build
       - ls
       - pwd
+      - cd ..
+      - ls 
+      - cd ..
+      - ls 
+      - cd ..
+      - ls
+      - cd ..
+      - ls
+      - cd ..
+      - ls
   build:
     commands:
       - echo Entered the build phase...
