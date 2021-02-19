@@ -12,15 +12,7 @@ phases:
       - echo pre_build
       - ls
       - pwd
-      - cd ..
-      - ls 
-      - cd ..
-      - ls 
-      - cd ..
-      - ls
-      - cd ..
-      - ls
-      - cd ..
+      - cd /
       - ls
   build:
     commands:
