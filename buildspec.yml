@@ -10,6 +10,7 @@ phases:
   pre_build:
     commands:
       - echo pre_build
+      - ls
   build:
     commands:
       - echo Entered the build phase...
