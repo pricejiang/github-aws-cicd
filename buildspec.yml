@@ -1,21 +1,26 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-       python: 3.8
-    commands: 
-      - echo set python runtime version 3.8
+  # install:
+  #   runtime-versions:
+  #      python: 3.8
+  #   commands: 
+  #     - echo set python runtime version 3.8
 
   pre_build:
     commands:
-      - echo pre_build
-      - ls
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 613690196834.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
-      - echo Entered the build phase...
       - echo Build started on `date`
-      - python3 main.py input/daginput/input_thermo.json
+      - echo Building the Docker image...          
+      - docker build -t drvyr-repository:latest .
+      - docker run --rm -e INPUT="input/daginput/input_MergeSafe.json" drvyr-repository:latest
+  
+  post_build:
+    commands:
+      - echo Build Done
 
 artifacts:
   files:
