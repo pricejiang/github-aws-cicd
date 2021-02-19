@@ -18,7 +18,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - python3 main.py input/daginput/input_thermo.json
+      - python3 /dryvr/main.py /dryvr/input/daginput/input_thermo.json
 
 artifacts:
   files:
