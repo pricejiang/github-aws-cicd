@@ -10,15 +10,12 @@ phases:
   pre_build:
     commands:
       - echo pre_build
-      - ls
-      - pwd
-      - cd /
-      - ls
+
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - python3 /dryvr/main.py /dryvr/input/daginput/input_thermo.json
+      - python3 /dryvr/main.py test.json
 
 artifacts:
   files:
