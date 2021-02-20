@@ -9,14 +9,15 @@ phases:
 
   pre_build:
     commands:
-      - echo install numpy 
-      - pip install numpy
-      - pip install scipy
+      - echo pre_build
+
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - python hello_world.py
+      - pwd
+      - cp -R ./cars /dryvr/cars/
+      - python3 /dryvr/main.py test.json
 
 artifacts:
   files:
