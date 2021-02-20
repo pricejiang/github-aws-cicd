@@ -15,6 +15,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
+      - pwd
       - python3 /dryvr/main.py test.json
 
 artifacts:
